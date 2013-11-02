@@ -1,3 +1,10 @@
+Todo:
+* Test all code steps
+* Add illustrations
+* Add jokes
+* Add a lock on solution and timing of exercise
+* Only let solution be displayed after a password prompt
+
 Steps
 =====
 

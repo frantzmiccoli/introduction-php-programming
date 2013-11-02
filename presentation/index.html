@@ -1,0 +1,1672 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PHP & Programming: an introduction</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=1024, initial-scale=1">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Economica' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script type="text/javascript">
+        var less = {
+            env: "development", // or "production"
+            async: true,       // load imports async
+            fileAsync: false,   // load imports async when in a page under
+            // a file protocol
+            poll: 3000,         // when in watch mode, time in ms between polls
+            functions: {},      // user functions, keyed by name
+            dumpLineNumbers: "all", // or "mediaQuery" or "all"
+            relativeUrls: false// whether to adjust url's to be relative
+        };
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"></script>
+
+    <link href="http://alexgorbatchev.com/pub/sh/3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="http://alexgorbatchev.com/pub/sh/3.0.83/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+    <script src="http://alexgorbatchev.com/pub/sh/3.0.83/scripts/shCore.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/3.0.83/scripts/shBrushXml.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/3.0.83/scripts/shBrushPhp.js" type="text/javascript"></script>
+
+</head>
+<body class="impress-not-supported">
+
+    <div id="impress">
+        <div id="title" class="step">
+            <h1 class="main-title">PHP &amp; programming</h1>
+            <h2 class="subtitle">An introduction</h2>
+
+            <p class="present-only center">&lt; Use arrow keys to navigate &gt;</p>
+            <br />
+        </div>
+
+        <div id="intro-1" class="step">
+            <p class="emphasis">Programming is a god like activity</p>
+            <p>It's a practical and cheap way to implement your craziest idea</p>
+            <br />
+            <p class="small">The boom of startups is linked with the opportunities created by computers</p>
+        </div>
+
+        <div id="intro-2" class="step">
+            <p class="emphasis">Programming is not a mystical magical power</p>
+            <p>It's a mix of knowledge, know how, creativity and tenacity</p>
+            <br />
+            <p class="small">What you have in front of you is just a big calculator that've been transformed by years of innovation</p>
+        </div>
+
+        <div id="intro-3" class="step">
+            <p class="emphasis">Don't fear bugs</p>
+            <p>Good programmers still have an army of bugs, they just know how to handle them and limit them</p>
+            <br />
+            <p class="small">Tenacity is just what you need to take care of those bugs. Bruteforce ? It works!</p>
+        </div>
+
+        <div id="intro-4" class="step">
+            <p class="emphasis">Learn by doing</p>
+            <p>My personnal point of view about programming and engineering is that there's no better learning than practive</p>
+            <br />
+            <p class="small">You won't break your computer, you'll eventually just fail and learn something new.</p>
+        </div>
+
+        <div id="intro-5" class="step">
+            <p class="emphasis">Learn by peers</p>
+            <p>My personnal point of view about teaching is that there's no better tutor than a peer</p>
+            <br />
+            <p class="small">I've started programming more than 10 years ago. I may not have the right explanation for new comers anymore.</p>
+        </div>
+
+        <div id="plan-1" class="step">
+            <ul>
+                <li>First part: The basic tools / keywords to know</li>
+                <li>Second part: Practice, practice and more ?</li>
+            </ul>
+        </div>
+
+        <div id="plan-2" class="step">
+            <p>Side note: an 8 hours format is awesome!</p>
+        </div>
+
+        <div id="programming-1" class="step">
+            <h1 class="emphasized-title">Programming</h1>
+            <p>Data & process</p>
+        </div>
+
+        <div id="programming-data" class="step">
+            <h2>Data</h2>
+            <ul>
+                <li>Text</li>
+                <li>Numbers</li>
+                <li>Positions</li>
+                <li>More complex things...</li>
+            </ul>
+        </div>
+
+        <div id="programming-process" class="step">
+            <h2>Process</h2>
+            <ul>
+                <li>Representation</li>
+                <li>Acquisition</li>
+                <li>Storage</li>
+                <li>Smarter stuff...</li>
+            </ul>
+        </div>
+
+        <div id="php-1" class="step">
+            <h1 class="emphasized-title">PHP</h1>
+            <p>A few introductive words</p>
+        </div>
+
+        <div id="php-2" class="step">
+            <h2>A few points on PHP</h2>
+            <ul>
+                <li>Learning by doing: cheap, web and simple</li>
+                <li>How to put dynamic content inside web page?</li>
+                <li>Compiler vs interpreter</li>
+            </ul>
+        </div>
+
+        <div id="php-3" class="step exercise">
+            <h2>Tradition is important</h2>
+            <p>Time for a little "hello world"</p>
+        </div>
+
+        <div id="php-4" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    echo "Hello World";
+                </pre>
+            </div>
+        </div>
+
+        <div id="request-life-cycle-1" class="step">
+            <h1 class="emphasized-title">Request life cyle</h1>
+        </div>
+
+        <div id="request-life-cycle-2" class="step">
+            <h2>So you validate your order on Amazon</h2>
+            <p>Naive and simplified, yet accurate</p>
+        </div>
+
+        <div id="request-life-cycle-3" class="step">
+            <h2>You clicked "Confirm"</h2>
+
+            <ul>
+                <li>Your browser (Chrome, Firefox, IE, ...) is sending a request</li>
+                <li>This request contains a URL, some cookies informations</li>
+                <li>This request is hitting a server (some physical computer)</li>
+            </ul>
+        </div>
+
+        <div id="request-life-cycle-4" class="step">
+            <h2>So there's this request</h2>
+
+            <ul>
+                <li>The request is targeting a precise port (just a number)</li>
+                <li>The server as a program listening (usually an Apache Server)</li>
+                <li>So yeah, there's a physical server and a software server</li>
+                <li>This server is here to handle the request</li>
+                <li>Apache knows what PHP program to call</li>
+            </ul>
+        </div>
+
+        <div id="request-life-cycle-5" class="step">
+            <h2>The program is running</h2>
+
+            <ul>
+                <li>The request is processed to identify the user and the order</li>
+                <li>The request is processed to confirm the order</li>
+                <li>Each of these operations implies "complex" logic</li>
+                <li>Each of these operations implies discussion with a database</li>
+                <li>In the end, a new HTML page is returned</li>
+            </ul>
+        </div>
+
+        <div id="tools-1" class="step">
+            <h1 class="emphasized-title">Tools</h1>
+            <h2>The right tools are half your skills</h2>
+        </div>
+
+        <div id="tools-2" class="step">
+            <h2>Apache</h2>
+
+            <p>You just need it to run your PHP</p>
+        </div>
+
+        <div id="tools-3" class="step">
+            <h2>MySQL</h2>
+
+            <p>Store your data</p>
+        </div>
+
+        <div id="tools-4" class="step">
+            <h2>XAMPP</h2>
+
+            <p>Make the previous shit easy</p>
+        </div>
+
+        <div id="tools-5" class="step">
+            <h2>Eclise PDT</h2>
+            <p>Type your code</p>
+        </div>
+
+        <div id="error-checking" class="step exercise">
+            <h2>Let's create an error</h2>
+
+            <p class="code-label">File 1: Simple errors</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    echo 'okokokok
+                    $t = 12
+                    $p = $t + 2
+                </pre>
+            </div>
+
+            <p class="code-label">File 2: Exception</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    throw new Exception('A problem occured');
+                </pre>
+            </div>
+        </div>
+
+        <div id="variable-1" class="step">
+            <h1 class="emphasized-title">Variables</h1>
+
+            <p>Your data</p>
+        </div>
+
+        <div id="variable-2" class="step">
+            <h2>What's a variable?</h2>
+            <ul>
+                <li>A box</li>
+                <li>With a label on it: <span class="past-only">its name</span></li>
+                <li>Having a content: <span class="past-only">its value</span></li>
+            </ul>
+        </div>
+
+        <div id="variable-3" class="step" data-style="same"></div>
+
+        <div id="variable-4" class="step">
+            <h2>The Excel parallel</h2>
+            <ul>
+                <li>Variable = cell</li>
+                <li>Variable's name = cell coordinate</li>
+            </ul>
+        </div>
+
+        <div id="variable-5" class="step exercise">
+            <h2 class="future-only present-only">Practice</h2>
+            <p class="small">In PHP variable names always have a leading $</p>
+            <p>$a contains 2</p>
+            <p>$b contains 3</p>
+            <p>print $a + $b</p>
+        </div>
+
+        <div id="variable-6" class="step solution" data-y="%+250">
+            <br /> <br /> <br /> <br />
+            <div class="code-wrapper past-only present-only">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $a = 2;
+                    $b = 3;
+                    echo $a + $b;
+                </pre>
+            </div>
+        </div>
+
+        <div id="variable-7" class="step exercise">
+            <h2 class="future-only present-only">Practice</h2>
+            <p>Declares three different integer</p>
+            <p>Print their sums</p>
+        </div>
+
+        <div id="variable-8" class="step solution" data-y="% + 150">
+            <br /> <br /> <br />
+            <div class="code-wrapper present-only past-only">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $a = 2;
+                    $b = 3;
+                    $c = 12;
+                    echo $a + $b + $c;
+                </pre>
+            </div>
+        </div>
+
+        <div id="variable-9" class="step exercise">
+            <h2 class="future-only present-only">Practice</h2>
+            <p>Declares three different integers</p>
+            <p>Print ok if their sum is inferior to 20</p>
+        </div>
+
+        <div id="variable-10" class="step solution" data-y="% + 200">
+            <br /> <br /> <br />
+            <div class="code-wrapper present-only past-only">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $a = 2;
+                    $b = 3;
+                    $c = 12;
+                    $sum = $a + $b + $c;
+                    if ($sum < 20) {
+                        echo 'ok';
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="type-1" class="step">
+            <h1 class="emphasized-title">Types</h1>
+            <p>A variable as type, the "kind" of thing it contains</p>
+        </div>
+
+        <div id="type-2" class="step">
+            <h2>Most common types</h2>
+            <ul>
+                <li>Integer: 10</li>
+                <li>Float: 3.12</li>
+                <li>Boolean: TRUE FALSE</li>
+                <li>String: "War is peace. Freedom is slavery. Ignorance is strength."</li>
+                <li>Array</li>
+                <li>Object</li>
+            </ul>
+        </div>
+
+        <div id="type-3" class="step">
+            <h2>Boolean algebra</h2>
+            <ul>
+                <li>and ( &amp;&amp; ): Do you like meatballs and pasta?</li>
+                <li>or ( || ): You'll go to bed if you are angry or crying? (one is enough)</li>
+                <li>xor ( is not or ): exclusive or, this menu includes cheese or desert? (one and just one)</li>
+                <li>not ( ! )</li>
+            </ul>
+        </div>
+
+        <div id="type-4" class="step exercise">
+            <h2 class="future-only present-only">Practice</h2>
+            <p class="future-only present-only">What is the output of that?</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $a = TRUE;
+                    $b = FALSE;
+                    if ($a && $b) {
+                        echo 'case 1  <br />';
+                    }
+                    if ($b || $a) {
+                        echo 'case 2  <br />';
+                    }
+                    if ($a && !$b) {
+                        echo 'case 3  <br />';
+                    }
+                    if (!($a && $b)) {
+                        echo 'case 4  <br />';
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="type-5" class="step solution past-only present-only" data-y="%+250">
+            <br /> <br /> <br /> <br /> <br /> <br /> <br />
+            <p>case 2</p>
+            <p>case 3</p>
+            <p>case 4</p>
+        </div>
+
+        <div id="type-6" class="step exercise">
+            <h2 class="future-only present-only">Practice</h2>
+            <p class="future-only present-only">What is the output of that?</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $accountBalance = 10000;
+                    $itemPrice = 1000;
+                    $isAffordable = ($accountBalance >= $itemPrice);
+                    if (!$isAffordable) {
+                        echo 'Item 1: You do not have enough money for that<br />';
+                    }
+
+                    $itemPrice = 12000;
+                    $isAffordable = ($accountBalance >= $itemPrice);
+                    if (!$isAffordable) {
+                        echo 'Item 2: You do not have enough money for that<br />';
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="type-7" class="step solution past-only present-only" data-y="%+250">
+            <br /> <br /> <br /> <br /> <br /> <br />
+            <p>Item 2: You do not have enough money for that</p>
+            <br /> <br />
+        </div>
+
+        <div id="control-1" class="step">
+            <h1 class="emphasized-title">Control structures</h1>
+            <p>What makes your code smart</p>
+        </div>
+
+        <div id="control-2" class="step">
+            <h2>if</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    if ($condition) {
+                        // instructions if $condition is TRUE...
+                    } elseif ($otherCondition) {
+                        // instructions if $otherCondition is TRUE (while $condition is FALSE)
+                    }else {
+                        // instructions otherwise...
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-3" class="step">
+            <h2>Comparisons</h2>
+            <ul>
+                <li> &gt;=</li>
+                <li> &gt; </li>
+                <li> &lt;= </li>
+                <li> &lt; </li>
+                <li> == </li>
+                <li> != </li>
+            </ul>
+            <p> Beware = means affectation</p>
+        </div>
+
+        <div id="control-4" class="step">
+            <h2 class="future-only present-only">Practice</h2>
+            <p class="future-only present-only">What is the output of that?</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $a = 12;
+                    $b = 13;
+                    if ($a < $b) {
+                        echo $a.' < '.$b;
+                    }
+                    if ($a > $b) {
+                        echo $a.' > '.$b;
+                    }
+                    if ($a == $b) {
+                        echo $a.' == '.$b.' first test';
+                    }
+                    if ($a = $b) { // never write that
+                        echo $a.' = '.$b;
+                    }
+                    if ($a == $b) {
+                        echo $a.' == '.$b.' second test';
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-5" class="step exercise">
+            <h2 class="future-only present-only">Practice</h2>
+            <ul>
+                <li>Three integers ($a, $b and $c)</li>
+                <li>Print the bigger one</li>
+            </ul>
+
+            <div class="code-wrapper future-only present-only">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $a = 12;
+                    $b = 13;
+                    $c = 21;
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-6" class="step present-only exercise" data-y="%+150">
+            <br /> <br /> <br /> <br /> <br />
+            <p>Change your $a, $b and $c, and see if you've cheated</p>
+       </div>
+
+        <div id="control-7" class="step present-only past-only solution" data-style="same">
+            <br /> <br /> <br /> <br /> <br />
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $a = 12;
+                    $b = 13;
+                    $c = 21;
+
+                    if (($a > $b) && ($a > $c)) {
+                        echo '$a';
+                    }
+                    if (($b > $a) && ($b > $c)) {
+                        echo '$b';
+                    }
+                    if (($c > $a) && ($c > $b)) {
+                        echo '$c';
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-8" class="step">
+            <h2>for</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    for ($i = 0; $i <= 10; $i++) {
+                        // do something
+                        // $i takes the value from 0 to 10 (11 different values)
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-9" class="step">
+            <h2>while</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    while ($condition) {
+                        // do something
+                        // this code have to change $condition's value at some
+                        // point
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-10" class="step">
+            <h2>foreach</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $profileElements = array(
+                        'name' => 'Andersen',
+                        'nickname' => 'Neo'
+                    );
+                    foreach ($profileElements as $key => $value) {
+                        // do something
+                        // $key will take the values: 'name' and 'nickname'
+                        // $value will take the values: 'Andersen' and 'Neo'
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-11" class="step exercise">
+            <h2 class="future-only present-only">Practice</h2>
+            <ul>
+                <li>Here's a for loop</li>
+                <li>Task 1: Use a while to do the same job</li>
+                <li>Task 2: Use a foreach to do the same job</li>
+            </ul>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $myArray = array('1', 2, 3, 4, 5);
+                    $length = count($length);
+                    for ($i = 0; $i < $length; $i++) {
+                        echo 'index: '.$i.'    value:'.$myArray[$i].'<br />';
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-12" class="step solution">
+            <h2>With a while</h2>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $myArray = array('1', 2, 3, 4, 5);
+                    $length = count($length);
+                    $i = 0;
+                    while ($i < $length) {
+                        echo 'index: '.$i.'    value:'.$myArray[$i].'<br />';
+                        $i++;
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="control-13" class="step solution">
+            <h2>With a foreach</h2>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    $myArray = array('1', 2, 3, 4, 5);
+                    foreach ($myArray as $key => $value) {
+                        echo 'index: '.$key.'    value:'.$value.'<br />';
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="still-here-1" class="step">
+            <h1 class="emphasized-title">Still here?</h1>
+
+            <p>Dead participants are invited to raise their hands.</p>
+        </div>
+
+        <div id="still-here-2" class="step">
+            <ul>
+                <li>What's a variable?</li>
+                <li>What's a loop?</li>
+                <li>What's '==' made for?</li>
+            </ul>
+        </div>
+
+        <div id="function-1" class="step">
+            <h1 class="emphasized-title">Function</h1>
+            <p>Basic unit for code reuse</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    function myFunction($argument1, $argument2, $argument3) {
+                        // do somehting here
+                        return $something; // optional
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="function-2" class="step exercise">
+            <h2>Simple function</h2>
+            <ul>
+                <li>Take two arguments</li>
+                <li>Return their sum</li>
+            </ul>
+        </div>
+
+        <div id="function-3" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    function sum($argument1, $argument2) {
+                        return $argument1 + $argument2;
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="function-4" class="step exercise">
+            <ul>
+                <li>A function can call another function</li>
+                <li>A function can call itself, this is called recursion</li>
+            </ul>
+        </div>
+
+        <div id="function-5" class="step exercise">
+            <h2 class="emphasized-title">Rabbits</h2>
+            <p>u_i is the population of rabbit at time i</p>
+            <p>u_i is the sum of u_(i - 1) and u_(i - 2)</p>
+            <p>u_0 = 1</p>
+            <p>u_1 = 2</p>
+        </div>
+
+        <div id="function-6" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    function fibonacci($generation) {
+                        if ($generation == 0) {
+                            return 1;
+                        }
+                        if ($generation == 1) {
+                            return 2;
+                        }
+                        return fibonnacci($generation - 1) + fibonnacci($generation - 2);
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="function-7" class="step exercise">
+            <h2>Factorial</h2>
+            <p>factorial(5) = 5 * 4 * 3 * 2 * 1</p>
+        </div>
+
+        <div id="function-8" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    function factorial($n) {
+                        if ($n == 0) {
+                            return 1;
+                        }
+                        return $n * factorial($n - 1);
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="testing-1" class="step">
+            <h1 class="emphasized-title">Testing</h1>
+
+            <p>So far you've manually tested your work</p>
+            <p class="past-only">Automated testing is a must</p>
+        </div>
+
+        <div id="testing-2" class="step" data-style="same"></div>
+
+        <div id="testing-3" class="step">
+            <h2>Math time</h2>
+
+            <p>An assertion is always true</p>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    assert(TRUE, 'Dummy test');
+                </pre>
+            </div>
+        </div>
+
+        <div id="testing-4" class="step">
+            <h2>But why?</h2>
+
+            <ul>
+                <li>Code is changed more often that everybody thinks it will</li>
+                <li>Test usually also involves a demonstration of how to use what you've made</li>
+            </ul>
+        </div>
+
+        <div id="testing-5" class="step exercise">
+            <h2>Factorial</h2>
+            <p>Add some assertion on our previous example</p>
+        </div>
+
+        <div id="testing-6" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    function factorial($n) {
+                        if ($n == 0) {
+                            return 1;
+                        }
+                        return $n * factorial($n - 1);
+                    }
+
+                    assert(factorial(0) == 1, 'Factorial');
+                    assert(factorial(1) == 1, 'Factorial');
+                    assert(factorial(3) == 6, 'Factorial');
+                    assert(factorial(4) == 7, 'Factorial');
+                </pre>
+            </div>
+        </div>
+
+        <div id="norm-0" class="step">
+            <h1 class="emphasized-title">Norms</h1>
+
+            <ul>
+                <li>It's important to produce an understandable code</li>
+                <li>It costs more to read it than to execute it</li>
+                <li>Speed is usualy not a problem</li>
+            </ul>
+        </div>
+
+        <div id="norm-1" class="step">
+            <p>To make our code perfect, just a documentation is missing</p>
+        </div>
+
+        <div id="norm-2" class="step">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    /**
+                     * Compute the factorial of an integer
+                     * @param integer $n the number for which the factorial
+                     *                   should be computed
+                     *
+                     * @return integer
+                     */
+                    function factorial($n) {
+                        if ($n == 0) {
+                            return 1;
+                        }
+                        return $n * factorial($n - 1);
+                    }
+
+                    assert(factorial(0) == 1, 'Factorial');
+                    assert(factorial(1) == 1, 'Factorial');
+                    assert(factorial(3) == 6, 'Factorial');
+                    assert(factorial(4) == 24, 'Factorial');
+                </pre>
+            </div>
+        </div>
+
+        <div id="norm-3" class="step">
+            <h2>Naming</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    // Spaces are not allowed, so they're usually replaced
+                    // pick one method and keep it
+                    $snake_case = 12;
+                    $camelCase = 12;
+                </pre>
+            </div>
+        </div>
+
+        <div id="norm-4" class="step">
+            <h2>Naming</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    // Explicit names without abbreviation
+                    // Always use convention for naming things
+
+                    // BAD
+                    $a = 120000;
+                    $rt = 0.025;
+                    $i = $a * $rt;
+
+                    // GOOD
+                    $amount = 120000;
+                    $interestRate = 0.025;
+                    $interests = $amount * $interestRate;
+                </pre>
+            </div>
+        </div>
+
+        <div id="norm-5" class="step">
+            <h2>Indent and always use brackets</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    function chk($i, $lmt, $s) {
+                    if ($i > $lmt) {if ($s != 'special') { return 'problem'; } else
+                    return 'special';}}
+                </pre>
+            </div>
+
+            <div class="code-wrapper past-only">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    function check($interestRate, $limitInterestRate, $status) {
+                        if ($interestRate > $limitInterestRate) {
+                            if ($status != 'special') {
+                                return 'problem';
+                            } else  {
+                                return 'special';
+                            }
+                        }
+                    };
+                </pre>
+            </div>
+        </div>
+
+        <div id="norm-6" class="step" data-style="same"></div>
+
+        <div id="split-1" class="step">
+            <h1 class="emphasized-title">Splitting your code</h1>
+            <p>A must!</p>
+        </div>
+
+        <div id="split-2" class="step">
+            <h2>Splitting your code</h2>
+            <ul>
+                <li>Between functions</li>
+                <li>Between files (require_once)</li>
+            </ul>
+        </div>
+
+        <div id="split-3" class="step exercise">
+            <ul>
+                <li>factorial.php</li>
+                <li>factorial_test.php</li>
+                <li>main.php</li>
+            </ul>
+        </div>
+
+        <div id="split-4" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    require_once 'factorial.php';
+                    require_once 'factorial_test.php';
+                </pre>
+            </div>
+        </div>
+
+        <div id="debugging-1" class="step">
+            <h1 class="emphasized-title">Debugging</h1>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php
+                    var_dump($myVariable); // complete print a variable (with type)
+                    die; // stop execution
+                </pre>
+            </div>
+        </div>
+
+        <div id="debugging-2" class="step exercise">
+            <h2>exercises/01_bugs/bugs.php</h2>
+
+            Fix it!
+        </div>
+
+        <div id="debugging-3" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                     if ($pageRequiredRole = 'all') { // line 33 this is not a test
+                </pre>
+            </div>
+        </div>
+
+        <div id="debugging-4" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    $userRole = $users[$user]; // line 37 assumes there's a $user key in $users
+                                               //         ... well there's not
+                </pre>
+            </div>
+
+            <div class="code-wrapper past-only">
+                <pre class="code, brush: php">
+                    if (!array_key_exists($users, $user) {
+                        return FALSE;
+                    }
+                    $userRole = $users[$user]; // line 37
+                </pre>
+            </div>
+
+            <div class="code-wrapper past-only">
+                <pre class="code, brush: php">
+                    $userRole = $users[$user]; // line 37
+                    if (!isset($userRole)) {
+                        return FALSE;
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="debugging-5" class="step solution" data-style="same"></div>
+
+        <div id="debugging-6" class="step solution">
+            <div class="code-wrapper past-only">
+                <pre class="code, brush: php">
+                    function getAverageAge() {
+                        $sum = 0;
+                        foreach($users as $user) {
+                            $sum += $user['age'];
+                        }
+                        $average = $sum / count($users); // Where's the return statement ?
+                    }
+
+                    getAverageAge(); // $average above is only defined inside the function
+                    assert($average > 12, 'getAverageAge');
+                </pre>
+            </div>
+        </div>
+
+        <div id="serious-things" class="step">
+            <h1 class="emphasized-title">Now the serious stuff</h1>
+        </div>
+
+        <div id="interacting-web-1" class="step">
+
+            <h2 class="emphasized-title">Getting user data</h2>
+
+            <p class="center">$_POST vs $_GET</p>
+
+            <p class="small">Reserved arrays</p>
+
+        </div>
+
+        <div id="interactive-web-2" class="step exercise">
+            <h2>exercises/02_1_user_entries</h2>
+
+            <p>So we will try to build a comment system</p>
+
+            <ul class="small">
+                <li>index.php: global display</li>
+                <li>inc/comment.php: where we will write our code</li>
+            </ul>
+        </div>
+
+        <div id="interactive-web-3" class="step exercise">
+            <p>First things first, look at what is sent within' $_POST</p>
+        </div>
+
+        <div id="interactive-web-4" class="step solution">
+            <p class="code-label">Display the $_POST if it's there</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    if (!empty($_POST)) {
+                        var_dump($_POST);die;
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="mysql-1" class="step">
+            <h1 class="emphasized-title">MySQL: database</h1>
+
+            <p> Where will you store your data ? </p>
+        </div>
+
+        <div id="mysql-2" class="step exercise">
+            <h2>PhpMyAdmin</h2>
+            <p> http://localhost/phpmyadmin </p>
+
+            <ul>
+                <li>Create a database "quotes"</li>
+                <li>Create a table "comment" with "id", "author" and "comment"</li>
+                <li>Create a user "dev_user"/"dev_password"</li>
+            </ul>
+
+            <p class="small">Use InnoDB engine</p>
+        </div>
+
+        <div id="mysql-3" class="step solution">
+            <ul>
+                <li>id: INT and AUTOINCREMENT</li>
+                <li>author: VARCHAR(50)</li>
+                <li>comment: TEXT</li>
+            </ul>
+        </div>
+
+        <div id="php-mysql-1" class="step">
+            <h1 class="emphasized-title">PHP talks with MySQL</h1>
+        </div>
+
+        <div id="php-mysql-2" class="step exercise">
+
+            <p>Test this and adapt to handle your comment</p>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    // Database access variables
+                    $databaseName = 'quotes';
+                    $databaseUser = 'dev_user';
+                    $databasePassword = 'dev_user';
+
+                    // Database handler
+                    $database = new PDO("mysql:host=$host;dbname=$databaseName", $databaseUser, $databasePassword);
+
+                    // Insertion
+                    $insertQuery = 'INSERT INTO comment (author, comment) VALUES (:author, :comment)';
+                    $insertStatement = $database->prepare($query);
+                    $insertValues = array(
+                            'author' => 'Voltaire',
+                            'comment' => 'A witty saying proves nothing.'
+                    );
+                    $insertStatement->execute($inserValues);
+                </pre>
+            </div>
+
+            <p class="small">Those requests can be written in PhpMyAdmin (more or less)</p>
+        </div>
+
+        <div id="php-mysql-3" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    // Database access variables
+                    $databaseName = 'quotes';
+                    $databaseUser = 'dev_user';
+                    $databasePassword = 'dev_user';
+
+                    // Database handler
+                    $database = new PDO("mysql:host=$host;dbname=$databaseName", $databaseUser, $databasePassword);
+
+                    // Insertion
+                    $insertQuery = 'INSERT INTO comment (author, comment) VALUES (:author, :comment)';
+                    $insertStatement = $database->prepare($query);
+
+                    // MAGIC HAPPENS HERE
+                    $insertValues = array(
+                            'author' => $_POST['nickname'],
+                            'comment' => $_POST['comment']
+                    );
+                    // MAGIC HAPPENS ABOVE
+
+                    $insertStatement->execute($inserValues);
+                </pre>
+            </div>
+        </div>
+
+        <div id="php-mysql-4" class="step exercise">
+            <p>Clean the mess</p>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    // Database access variables
+                    // @TODO ( in a file dedicated to storing your configuration)
+                    $databaseName = 'quotes';
+                    $databaseUser = 'dev_user';
+                    $databasePassword = 'dev_user';
+
+                    // Database handler
+                    // @TODO ( in a file dedicated to create your connections)
+                    $database = new PDO("mysql:host=$host;dbname=$databaseName", $databaseUser, $databasePassword);
+
+                    // Insertion
+                    // This sounds legit inside the comment file
+                    $insertQuery = 'INSERT INTO comment (author, comment) VALUES (:author, :comment)';
+                    $insertStatement = $database->prepare($query);
+
+                    $insertValues = array(
+                            'author' => $_POST['nickname'],
+                            'comment' => $_POST['comment']
+                    );
+                    $insertStatement->execute($insertValues);
+                </pre>
+            </div>
+        </div>
+
+        <div id="php-mysql-5" class="step solution">
+            <p>Is everything clear ?</p>
+        </div>
+
+        <div id="php-mysql-6" class="step exercise">
+            <p>Now let’s display our comments</p>
+
+            <p class="code-label">Some hints</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    $selectQuery = 'SELECT author, comment FROM comment;';
+                    $commentsToDisplay = $database->query($selectQuery)->fetchAll();
+                </pre>
+            </div>
+        </div>
+
+        <div id="php-mysql-7" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php /* ... Somewhere in comment.php ... */ ?>
+                    $selectQuery = 'SELECT author, comment FROM comment;';
+                    $commentsToDisplay = $database->query($selectQuery);
+                </pre>
+            </div>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php /* ... Later on in index.php ... */ ?>
+
+                    &lt;?php foreach ($commentsToDisplay as $commentToDisplay) { ?>
+
+                        <!-- back to HTML here -->
+
+                    &lt;?php } ?>
+                </pre>
+            </div>
+
+        </div>
+
+        <div id="php-mysql-8" class="step solution">
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php /* ... Later on in index.php... */ ?>
+
+                    &lt;?php foreach ($commentsToDisplay as $commentToDisplay) { ?>
+
+                        &lt;div class="comment-container">
+                            &lt;span class="author"> &lt;?php echo $commentToDisplay['author'] ?>: &lt;/span>
+                            &lt;span class="comment"> &lt;?php echo $commentToDisplay['comment'] ?> &lt;/span>
+                        &lt;/div>
+
+                    &lt;?php } ?>
+                </pre>
+            </div>
+        </div>
+
+        <div id="cheers" class="step">
+
+            <h1 class="emphasized-title">Objective reached: cheers</h1>
+
+        </div>
+
+        <div id="security-1" class="step">
+
+            <h1 class="emphasized-title">Extra security</h1>
+
+            <p class="center">What we've done so far is not secure</p>
+
+        </div>
+
+        <div id="security-2" class="step">
+
+            <h2 class="emphasized-title">SQL Injection</h2>
+
+            <p class="code-label small">What we've done</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    // Insertion
+                    $insertQuery = 'INSERT INTO comment (author, comment) VALUES (:author, :comment)';
+                    $insertStatement = $database->prepare($query);
+                    $insertValues = array(
+                            'author' => $_POST['nickname'],
+                            'comment' => $_POST['comment']
+                    );
+                    $insertStatement->execute($inserValues);
+                </pre>
+            </div>
+
+            <p class="code-label small">What's bad</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    // Insertion
+                    $author = $_POST['nickname'];
+                    $comment = $_POST['comment'];
+                    $insertQuery = 'INSERT INTO comment (author, comment) VALUES ('.$author.', '.$comment.')';
+                    $insertStatement = $database->query($query);
+                </pre>
+            </div>
+
+        </div>
+
+        <div id="security-3" class="step exercise">
+
+            <p class="code-label small">What's bad</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    // Insertion
+                    $author = $_POST['nickname'];
+                    $comment = $_POST['comment'];
+                    $insertQuery = 'INSERT INTO comment (author, comment) VALUES ("'.$author.'", "'.$comment.'")';
+                    $insertStatement = $database->query($query);
+                </pre>
+            </div>
+
+            <p class="code-label small">What if</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    if ($_POST['nickname'] == '";') {
+                        echo 'The user knows what he does and is not nice !';
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="security-4" class="step">
+
+            <h2 class="emphasized-title">XSS</h2>
+
+            <p class="code-label">Type this comment</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;script>alert(document.cookie);&lt;/script>
+                </pre>
+            </div>
+
+            <ul class="past-only">
+                <li>Cookies are private informations</li>
+            </ul>
+
+        </div>
+
+        <div id="security-5" class="step" data-style="same">
+        </div>
+
+        <div id="security-6" class="step">
+            <p class="code-label">Quick fix</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    echo htmlentities( $commentToDisplay['comment'], ENT_HTML5, 'UTF-8');
+
+                    // and the same for the author
+                </pre>
+            </div>
+
+            <p class="small bold">Ideal fix: sanitize user input (more complicated but cleaner)</p>
+        </div>
+
+        <div id="splitting-1" class="step exercise">
+            <h1 class="emphasized-title">Splitting the code</h1>
+            <ul>
+                <li>Make a function that insert a comment</li>
+                <li>Make a function that get the comments</li>
+            </ul>
+        </div>
+
+        <div id="splitting-2" class="step solution">
+            <p class="code-label">Try to not rely on global variables</p>
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    /**
+                     * Insert a comment
+                     *
+                     * @param PDO $database   The database
+                     * @param array $rawData  The data from which the values should be taken
+                     * @return void
+                     */
+                    function insertComment($database, $rawData) {
+                        // code me
+                    }
+
+                    /**
+                     * Get the comments
+                     *
+                     * @param PDO $database   The database
+                     * @return array
+                     */
+                    function getComments($database) {
+                        // code me and don't forget to return something
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="array-1" class="step">
+            <h1 class="emphasized-title">Let's talk about arrays</h1>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    $a = array(1, 2, 3);
+                    $a[] = 4; // now array is [1, 2, 3, 4]
+                    $a[1]; // 2 (and not 1, we count from 0)
+
+                    // in our exercises
+                    $a = array(12, 34, 32, 24, -12, 28, 56);
+                </pre>
+            </div>
+        </div>
+
+        <div id="array-2" class="step exercise">
+            <h2>exercises/03_array</h2>
+
+            <p class="small">Split among each group members, one per task</p>
+            <ul>
+                <li>Get max</li>
+                <li>Get max index</li>
+                <li>Tell if array is sorted</li>
+                <li>Get sum</li>
+                <li>Reverse</li>
+            </ul>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    assert(array_max($a) == 56);
+                    assert(array_max_index($a) == 6);
+                    assert(is_sorted($a) == FALSE);
+                    assert(array_sum($a) == 174);
+                    $b = reverse($a);
+                    assert($b[1] == 28);
+                </pre>
+            </div>
+        </div>
+
+        <div id="array-3" class="step solution">
+            <h2>array_max</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    function array_max($a) {
+                        $max = NULL;
+                        foreach ($a as $value) {
+                            if (!isset($max) || ($value > $max) {
+                                $max = $value;
+                            }
+                        }
+                        return $value;
+                    }
+
+                    // PHP native function: max($a);
+                </pre>
+            </div>
+        </div>
+
+        <div id="array-4" class="step solution">
+            <h2>array_max_index</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    function array_max_index($a) {
+                        $maxIndex = NULL;
+                        $max = NULL;
+                        $length = count($a);
+                        for ($i = 0; $i < $length; $i++) {
+                            $value = $a[$i];
+                            if (!isset($max) || ($value > $max) {
+                                $maxIndex = $i;
+                                $max = $value;
+                            }
+                        }
+                        return $maxIndex;
+                    }
+
+                    // PHP native function: array_search(max($a), $a);
+                </pre>
+            </div>
+        </div>
+
+        <div id="array-5" class="step solution">
+            <h2>is_sorted</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    function is_sorted($a) {
+                        $previousValue = NULL;
+
+                        foreach ($a as $currentValue) {
+                            if (isset($previousValue) && ($previousValue > $currentValue)) {
+                                    return FALSE;
+                                }
+                            }
+                            $previousValue = $currentValue;
+                        }
+                        return TRUE;
+                    }
+
+                    // PHP native function: none
+                </pre>
+            </div>
+        </div>
+
+        <div id="array-6" class="step solution">
+            <h2>array_sum</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    function array_sum($a) {
+                        $sum = 0;
+
+                        foreach ($a as $value) {
+                            $sum += $value;
+                        }
+
+                        return $sum
+                    }
+
+                    // PHP native function: none
+                </pre>
+            </div>
+        </div>
+
+        <div id="array-7" class="step solution">
+            <h2>reverse</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    function reverse($a) {
+                        $length = count($a);
+                        $reversedArray = array();
+
+                        for ($i = $length - 1; $i >= 0; $i--) {
+                            $reversedArray[] = $a[$i];
+                        }
+                        return $reversedArray;
+                    }
+
+                    // PHP native function: array_reverse
+                </pre>
+            </div>
+        </div>
+
+        <div id="array-8" class="step">
+            <p>If you like that kind of problems, this is called "algorithmic"</p>
+        </div>
+
+        <div id="relational-1" class="step">
+            <div class="title-screen">
+                <img class="illustration" src="img/illustrations/link.jpg" alt="link"/>
+                <br />
+                <h1 class="emphasized-title">Relational data</h1>
+                <br />
+                <!--<p class="center">Because everything is connected</p>-->
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div id="relational-2" class="step exercise">
+            <ul>
+                <li>I've a list of quotes</li>
+                <li>Each quote can be commented</li>
+                <li>How do I modelize this in my database?</li>
+            </ul>
+        </div>
+
+        <div id="relational-3" class="step solution">
+            <h2>Foreign keys</h2>
+
+            <ul>
+                <li>A quote has an id</li>
+                <li>Each comment can be link to a quote because it has a quote_id</li>
+            </ul>
+        </div>
+
+        <div id="relational-4" class="step exercise">
+            <h2>exercises/04_2_quotes_with_comments</h2>
+
+            <p>Load the file in your database</p>
+        </div>
+
+        <div id="relational-5" class="step exercise">
+            <p>Update index.php to display a list of quotes</p>
+            <p>On click each quote lead to something like: index.php?id=12</p>
+        </div>
+
+        <div id="relational-6" class="step solution">
+            <p>Getting quotes really looks like getting comments</p>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php /* ... Later on in index.php... */ ?>
+
+                    &lt;?php foreach ($quotesToDisplay as $quoteToDisplay) { ?>
+
+                        &lt;a href="index.php?id=&lt;?php echo $quoteToDisplay['id'] ?>">
+                            &lt;div class="quote-container jumbotron">
+                                &lt;blockquote class="quote"> &lt;?php echo $quoteToDisplay['quote'] ?> &lt;/blockquote>
+                                &lt;span class="author"> &lt;?php echo $quoteToDisplay['author'] ?>: &lt;/span>
+                            &lt;/div>
+                        &lt;/a>
+
+                    &lt;?php } ?>
+                </pre>
+            </div>
+        </div>
+
+        <div id="relational-7" class="step exercise">
+            <ul>
+                <li>Display only one quote when an id is provided</li>
+                <li>Display comments only when one quote is displayed</li>
+                <li>Update your database to integrate a quote_id in each comment</li>
+                <li>Display only related comments</li>
+                <li>Update the form</li>
+            </ul>
+        </div>
+
+        <div id="relational-8" class="step solution">
+            <h2>One quote and not comment on the listing</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    $listView = ! array_key_exists($_GET, 'id');
+
+                    if ($listView) {
+                        require 'list-view.php'
+                    } else {
+                        require 'quote-view.php'
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="relational-9" class="step solution">
+            <h2>Update the comment table</h2>
+
+            <ul>
+                <li>Add field quote_id of type int</li>
+                <li>Add a foreign key on it</li>
+            </ul>
+        </div>
+
+        <div id="relational-10" class="step solution">
+            <h2>Getting the right comments</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    /**
+                     * Get the comments
+                     *
+                     * @param PDO    $database      The database
+                     * @param string $quoteId       The relevant quote_id
+                     * @return array
+                     */
+                    function getComments($database, $quoteId) {
+                        $selectQuery = 'SELECT author, comment FROM comment WHERE quote_id = :quote_id';
+                        $data = array('quote_id' => $quoteId);
+                        $statement = $database->prepare($selectQuery)
+                        $commentsToDisplay = $statement->execute($data)->fetchAll();
+                        return $commentToDisplay;
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="relational-11" class="step solution">
+            <h2>Updating the comment form and insertion</h2>
+
+            <div class="code-wrapper">
+                <pre class="code, brush: php">
+                    &lt;?php /* inside the form */ ?>
+                    &lt;input type="hidden" name="quote_id" value="&lt;php echo $_GET['id']; ?>"/>
+
+                    &lt;?php /*
+                    Don't forget the comment insertion in comment.php, you have to handle a quote id now
+                    */ ?>
+                </pre>
+            </div>
+        </div>
+
+        <div id="relational-12" class="step exercise">
+            <h2>Extra points for order</h2>
+
+            <p>How to display your comments in the right order ?</p>
+
+            <p class="small">Hint: creation date + ORDER BY</p>
+        </div>
+
+        <div id="conclusion-1" class="step">
+            <h1 class="emphasized-title">Conclusion</h1>
+
+            <p>The key point I would have talked about (with a couple more days):</p>
+            <ul>
+                <li>How to version your code (git, bitbucket)</li>
+                <li>Introduction to MVC</li>
+                <li>Introduction to other Design Patterns</li>
+                <li>Discover a framework (Code Igniter ?). As beginners, run away from the big heavy stuff like Symfony and Zend.</li>
+                <li>Using the Linux command line</li>
+            </ul>
+        </div>
+
+        <div id="conclusion-2" class="step">
+            <h2>Going further</h2>
+
+            <ul>
+                <li>Rule 1: Get your hands dirty! (start any project)</li>
+                <li>Rule 2: Get your hands dirty!</li>
+                <li>Rule 3: Be curious to learn more</li>
+                <li>Rule 4: Be curious to do it better (you won't get it right, the first times)</li>
+            </ul>
+        </div>
+
+        <div id="credits" class="step">
+            <a href="http://500px.com/photo/10649275" target="_blank">Link picture</a>
+
+        </div>
+
+
+        <div id="overview" class="step" data-style="overview">
+
+        </div>
+    </div>
+
+    <div class="fallback-message">
+        <p>Your browser doesn't support the features required by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>You may not be informed about "Why does having a recent browser is important ?".</p>
+        <p>Now at least, you know that you can't see content like this site.</p>
+        <p>We suggest you to go there : <a href="http://browsehappy.com/" target="_blank">browsehappy.com</a></p>
+    </div>
+
+    <script type="text/javascript" src="lib/impress.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/chillin.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).chillin({
+                layoutAlgorithm: 'outspiral'
+            });
+            impress().init();
+
+            // linked with syntax highlighter rather than Chillin.js
+            SyntaxHighlighter.all();
+        });
+    </script>
+
+</body>
+</html>

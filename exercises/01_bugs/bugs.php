@@ -29,14 +29,16 @@ $pagesAccessRules = array(
  * @return bool
  */
 function canUserAccessPage($user, $page) {
+    global $pagesAccessRules; // using global is bas
+    global $users; // using global is bas
     $pageRequiredRole = $pagesAccessRules[$page]; 
     if ($pageRequiredRole = 'all') {
-        return TRUE,
+        return TRUE;
     }
 
     $userRole = $users[$user];
     if ($pageRequiredRole == 'user') {
-        if (($userRole == 'admin') || ($userRole == 'user')) {
+        if (($userRole == 'admin') || ($userRole == 'user')) {
             return TRUE;
         } 
     }
@@ -49,10 +51,12 @@ function canUserAccessPage($user, $page) {
     return FALSE;
 }
 
+
 assert(!canUserAccessPage('marie', 'backoffice'), 'canUserAccessPage');
 assert(!canUserAccessPage('josuah', 'backoffice'), 'canUserAccessPage');
 
 function getAverageAge() {
+    global $users; // using global is bas
     $sum = 0;
     foreach($users as $user) {
         $sum += $user['age'];

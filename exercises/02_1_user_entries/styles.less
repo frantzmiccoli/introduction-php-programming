@@ -10,8 +10,27 @@
 
 .valid {
   float: right;
+  margin: @grid-gutter-width;
+  margin-top: @grid-gutter-width / 4;
+  margin-right: @grid-gutter-width / 4;
 }
 
 .footer {
   min-height: 10px;
+}
+
+.comment-container {
+  .well;
+  .well-lg;
+  box-sizing: border-box;
+  clear: both;
+  width: 100%;
+
+  .comment {
+    display: block;
+    clear: both;;
+  }
+  .author {
+    float: left;
+  }
 }

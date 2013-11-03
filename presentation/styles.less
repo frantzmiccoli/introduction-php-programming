@@ -20,6 +20,7 @@
   }
   .fallback-message {
     opacity: 1.0;
+    display: none;
   }
 }
 
@@ -30,6 +31,10 @@
 // COMMON EFFECTS AND STYLES
 .never {
   opacity: 0;
+}
+
+.invisible {
+  .never;
 }
 
 .present-only, .past-only, .future-only {
@@ -89,6 +94,9 @@
   margin-bottom: 0;
 }
 
+.clear {
+  clear: both;
+}
 // STYLE
 
 body, div, p, span {
@@ -101,6 +109,10 @@ body {
 
   color: @font-color;
   font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 // Handling @2X
@@ -144,15 +156,123 @@ a {
 
 .title-screen {
   position:relative;
-  .illustration {
-    position: absolute;
-    z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3em;
+}
+
+.step.solution.locked, .step .solution.locked {
+  .invisible;
+}
+
+#help-box {
+  display: inline-block;
+  z-index: 10;
+  position: fixed;
+  right: 20px;
+
+  helper {
+    float: left;
+  }
+
+  #timer {
+    display: inline-block;
+    margin: 10px;
+    width: 50px;
+    text-align: left;
+  }
+
+  #unlock {
+    display: inline-block;
+    background: @font-color;
+    color: @emphasis;
+    cursor: pointer;
+    .border-radius(10px);
+    padding: 10px;
   }
 }
 
-#relational-1 {
-  .illustration {
-    top: -100%;
-  }
+
+#request-life-cycle-1 .title-screen {
+  background-image: url('./img/illustrations/waterfall.jpg');
 }
 
+#tools-1 .title-screen {
+  background-image: url('./img/illustrations/tools.jpg');
+}
+
+#variable-1 .title-screen {
+  background-image: url('./img/illustrations/cat-box.jpg');
+  padding: 3.5em;
+}
+
+#type-1 .title-screen {
+  background-image: url('./img/illustrations/fishes.jpg');
+}
+
+#control-1 .title-screen {
+  background-image: url('./img/illustrations/rail.jpg');
+}
+
+#function-1 .title-screen {
+  background-image: url('./img/illustrations/machine.jpg');
+}
+
+#testing-1 .title-screen {
+  background-image: url('./img/illustrations/chemicals.jpg');
+}
+
+#norm-0 .title-screen {
+  background-image: url('./img/illustrations/archive.jpg');
+}
+
+#split-1 .title-screen, #splitting-1 .title-screen {
+  background-image: url('./img/illustrations/tomato.jpg');
+  padding-top: 0em;
+  padding-bottom: 5em;
+}
+
+#debugging-1 .title-screen {
+  background-image: url('./img/illustrations/ant.jpg');
+  padding: 2em;
+  padding-top: 1em;
+  padding-bottom: 4.8em;
+}
+
+#mysql-1 .title-screen {
+  background-image: url('./img/illustrations/tanks.jpg');
+}
+
+#php-mysql-1 .title-screen {
+  background-image: url('./img/illustrations/children.jpg');
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+#objective-reached .title-screen {
+  background-image: url('./img/illustrations/party.jpg');
+  padding-top: 1em;
+  padding-bottom: 5em;
+}
+
+#security-1 .title-screen {
+  background-image: url('./img/illustrations/guard.jpg');
+}
+
+#array-1 .title-screen {
+  background-image: url('./img/illustrations/trees.jpg');
+  padding: 0.2em 3em 2em;
+}
+
+#relational-1 .title-screen {
+  background-image: url('./img/illustrations/link.jpg');
+}
+
+#conclusion-0 .title-screen {
+  background-image: url('./img/illustrations/sleeping.jpg');
+  padding: 1em 3em 6em;
+}
+
+.serious-img {
+  width: 9em;
+}

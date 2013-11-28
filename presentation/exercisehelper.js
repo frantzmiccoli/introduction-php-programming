@@ -11,7 +11,7 @@
 
             this._timerRef = this._getCurrentTimestamp();
             this._protected = true;
-            this._protectionKey = "d83f59306c4776a4e37667f6b87eb6bc";
+            this._protectionKey = "bb271b9eb7b4ecd1f7ae7a71cca8f8e3";
 
             this._bindListeners();
             this._hideSolutions();

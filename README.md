@@ -1,93 +1,11 @@
-Todo:
-* Test all code steps
-* Add illustrations
-* Add jokes
-* Add a lock on solution and timing of exercise
-* Only let solution be displayed after a password prompt
+Well, well, well, what do we have here?
+========
 
-Steps
-=====
+This repository contains a basic course of programming through PHP.
 
-What is programming?
-------------
+Why PHP?
+========
 
-* Data and process
+Because I think web programming is the easiest to bring new joiners to the realm of creation through code and because PHP is the most common web languages (with many tools on every platform and super cheap hosting).
 
-What is PHP?
-------------
-
-* Exo: "Hello World"
-
-What is happening when I'm updating my informations on a website?
------------
-
-
-Those software with strange names: Eclipse PDT, Apache, MySQL, XAMPP
------------
-
-* Exo: check error reporting
-
-What's a variable?
------------
-
-* Box with a name
-* Exo: simple variable declaration and sum
-
-Control structures and comparison operators
-----------
-
-* Exo: simple if
-* Exo: simple loop
-
-What's a function?
-----------
-
-* Exo: simple fibo
-* Exo: simple fact
-* Exo: fibo recursive
-* Exo: chaining function call
-
-Some development norms: naming, documentation, code split
----------
-
-* Exo: Splitting code between file
-
-Debugging
----------
-
-* Exo: var_dump, die, echo
-
-Get user entries
----------
-
-* Exo: Get data from a form
-
-Interact with a database
----------
-
-* Exo: MySQL database and table creation
-* Exo: MySQL insertion
-* Exo: MySQL data retrieval
-* Exo: pretty display
-
-Security
----------
-
-* Basic SQL Injection
-* Basic XSS
-
-Arrays
----------
-
-* Exo: basic array manipulation
-
-Sorting algorithm
---------
-
-* Exo: Insertion sort
-
-Relational databases
---------
-
-* Exo: showing list of quotes
-* Exo: commenting quotes
+JavaScript could also have match the above description (at least for client side development), however JavaScript is one of the toughest language I can think about. I won't try to teach it to neophyte since most of the professional I meet don't actually understand what they do, and what could be a program end up in being a chaining of callbacks and JQuery selectors.

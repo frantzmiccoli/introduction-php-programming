@@ -3,7 +3,7 @@ Well, well, well, what do we have here?
 
 This repository contains an introductory course of programming through PHP.
 
-To access it just go to the [GitHub page](http://frantzmiccoli.github.io/introduction-php-programming/ "Introduction to PHP and programming")
+To access it just go to the [GitHub page](http://frantzmiccoli.github.io/introduction-php-programming/ "Introduction to PHP and programming").
 
 Why PHP?
 ========
